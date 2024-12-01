@@ -48,7 +48,7 @@ func TestPageWriteRead(t *testing.T) {
 	got = make([]byte, len(want))
 	page.Read(7, got)
 	if string(got) != string(want) {
-		t.Fatalf("Write failed: got %s", string(got), string(want))
+		t.Fatalf("Write failed: got %s want %s", string(got), string(want))
 	}
 
 	// Write data at an offset
